@@ -1,0 +1,19 @@
+div {
+    width: 100%;
+}
+
+@media (max-width: 500px) {
+    a {
+        display: block;
+    }
+}
+
+a {
+    padding-left: 3%;
+    padding-right: 15%;
+    border-left: 1px solid black;
+}
+
+button {
+    top: 0;
+}
