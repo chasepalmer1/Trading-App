@@ -1,17 +1,22 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
 import './App.css'
+import {Route, Routes} from 'react-router-dom'
+
 import NavBar from './components/NavBar/NavBar.jsx'
+import paperTrading from './pages/paperTrading.jsx'
+import portfolioTracking from './pages/portfolioTracking.jsx'
+
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <>
-      <NavBar inOut={"Log In"}></NavBar>
+      <NavBar></NavBar>
+      <Routes>
+        <Route path="/" element={<paperTrading/>}/>
+        <Route path="/portTrack" element={<portfolioTracking/>}/>
+      </Routes>
     </>
   )
 }
 
-export default App
+export default App;

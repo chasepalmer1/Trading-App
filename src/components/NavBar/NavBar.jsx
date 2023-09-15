@@ -1,7 +1,8 @@
-import React from 'react';
+import React from 'react'
 import './NavBar.css'
+import { Link } from 'react-router-dom'
 
-const NavBar = (props) => {
+const NavBar = () => {
 
     return (
         <>
@@ -10,9 +11,8 @@ const NavBar = (props) => {
             </div>
             <div class="inner">
                 <ul>
-                    <a>Home</a>
-                    <a>My Portfolio</a>
-                    <a>Markets</a>
+                    <Link to="/">Paper-Trade</Link>
+                    <Link to="/portTrack">Portfolio Tracker</Link>
                 </ul>
             </div>
         </>
