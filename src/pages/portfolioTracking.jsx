@@ -1,13 +1,12 @@
 import React from 'react'
 
-const portfolioTracking = () => {
+const PortfolioTracking = () => {
 
     return (
         <>
-            <h1>Hello?</h1>
         </>
     )
 
 }
 
-export default portfolioTracking;
+export default PortfolioTracking;
