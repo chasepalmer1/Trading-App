@@ -30,8 +30,8 @@ a:hover {
 body {
   margin: 0;
   display: flex;
-  min-width: 320px;
-  min-height: 80vh;
+  min-width: auto;
+  min-height: fit-content;
 }
 
 h1 {
