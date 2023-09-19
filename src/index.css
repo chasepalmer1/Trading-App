@@ -50,10 +50,25 @@ body {
   margin: 0;
   display: flex;
   min-width: auto;
-  min-height: fit-content;
+  min-height: 100%;
 }
 
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+input {
+  width: 100%;
+  background-color: #4f4f4f82;
+  border: none;
+  border: 1px solid black;
+  border-radius: 5px;
+  box-shadow: 1px 1px 40px 1px #32323282;
+  color: #b6b6b6;
+}
+
+input:focus {
+  outline: none;
+  border: 2px solid #32c93a6a;
 }

@@ -1,5 +1,4 @@
 import React from 'react'
-import './PortfolioChart.css'
 
 const PortfolioChart = () => {
     return (
