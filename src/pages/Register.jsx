@@ -1,7 +1,10 @@
+import axios from "axios";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
+import { API_PORT } from "../models/constants";
 
-function Register() {
+const Register = () => {
     const history = useNavigate()
 
     const [email, setEmail] = useState('')
@@ -14,6 +17,7 @@ function Register() {
 
         try {
             const res = await axios.post(`http://localhost:${API_PORT}/register`, {first_name, last_name, email, password})
+            console.log(res.data)
             if(res.data == "EMAIL_EXISTS") {
                 // Email already registered
             }

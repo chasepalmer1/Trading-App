@@ -2,8 +2,10 @@ import express from 'express'
 import cors from 'cors'
 import { API_PORT } from '../models/constants.js'
 import account from '../models/schemas/account.js'
+import startMongo from '../models/mongo.js'
 
 const app = express()
+startMongo()
 app.use(express.json())
 app.use(express.urlencoded({extended: true}))
 app.use(cors())
@@ -27,7 +29,8 @@ app.post('/login', async(req, res) => {
             res.json({error: 0, first_name: check.first_name})
         }
     }
-    catch {
+    catch(e) {
+        console.log(e)
         res.json("ERROR")
     }
 })
@@ -37,6 +40,7 @@ app.post('/login', async(req, res) => {
 // Register
 
 app.post("/register", async(req, res) => {
+    console.log(req)
     const {first_name, last_name, email, password} = req.body
 
     const data = {
@@ -57,7 +61,8 @@ app.post("/register", async(req, res) => {
             await account.insertMany([data])
         }
     }
-    catch {
+    catch(e) {
+        console.log(e)
         res.json("ERROR")
     }
 })

@@ -1,11 +1,11 @@
-import * as dotenv from 'dotenv'
-dotenv.config()
+// import * as dotenv from 'dotenv'
+// dotenv.config()
 
-const MONGO_USER = process.env['MONGO_USER']
-const MONGO_PASS = process.env['MONGO_PASS']
-const MONGO_URL = process.env['MONGO_URL']
-const MONGO_DB = process.env['MONGO_DB']
-const API_PORT = process.env['API_PORT']
+const MONGO_USER = 'admin'
+const MONGO_PASS = 'vdL1kZUDoCeSqaR0'
+const MONGO_URL = 'tradehub.jvbeclf.mongodb.net'
+const MONGO_DB = 'tradehub'
+const API_PORT = 8000
 
 const MONGO_URI = `mongodb+srv://${MONGO_USER}:${MONGO_PASS}@${MONGO_URL}/${MONGO_DB}?retryWrites=true&w=majority`
 
