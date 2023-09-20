@@ -7,6 +7,8 @@ const MONGO_URL = 'tradehub.jvbeclf.mongodb.net'
 const MONGO_DB = 'tradehub'
 const API_PORT = 8000
 
+const TOKEN_KEY = 'SULI'
+
 const MONGO_URI = `mongodb+srv://${MONGO_USER}:${MONGO_PASS}@${MONGO_URL}/${MONGO_DB}?retryWrites=true&w=majority`
 
-export { MONGO_URI, API_PORT }
+export { MONGO_URI, API_PORT, TOKEN_KEY }

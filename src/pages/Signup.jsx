@@ -4,13 +4,17 @@ import { toast, ToastContainer } from "react-toastify";
 import { API_PORT } from "../../api/models/constants";
 import axios from "axios";
 
-const Login = () => {
+const Signup = () => {
     const navigate = useNavigate();
     const [inputValue, setInputValue] = useState({
+        first_name: "",
+        last_name: "",
         email: "",
         password: ""
-    })
-    const { email, password } = inputValue;
+    });
+
+    const { first_name, last_name, email, password } = inputValue;
+
     const handleOnChange = (e) => {
         const { name, value } = e.target;
         setInputValue({
@@ -34,36 +38,55 @@ const Login = () => {
     const handleSubmit = async(e) => {
         e.preventDefault();
         try {
-            const { data } = await axios.post(`http://localhost:${API_PORT}/login`, {...inputValue}, {withCredentials: true})
-            console.log(data)
+            const { data } = await axios.post(`http://localhost:${API_PORT}/signup`, {...inputValue}, {withCredentials: true})
 
             const { success, message } = data;
 
-            if(success) {
+            if (success) {
                 handleSuccess(message);
-
                 setTimeout(() => {
                     navigate("/")
                 }, 1000);
-            } else {
-                handleError(message)
+            }
+            else {
+                handleError(message);
             }
         }
-        catch(error) {
+        catch (error) {
             console.log(error)
         }
-
         setInputValue({
             ...inputValue,
+            first_name: "",
+            last_name: "",
             email: "",
-            password: ""
+            password: "",
         })
     }
-
     return (
         <div className="form_container">
-          <h2>Login Account</h2>
+          <h2>Signup Account</h2>
           <form onSubmit={handleSubmit}>
+            <div>
+              <label htmlFor="email">First Name</label>
+              <input
+                type="text"
+                name="first_name"
+                value={first_name}
+                placeholder="Enter your first name"
+                onChange={handleOnChange}
+              />
+            </div>
+            <div>
+              <label htmlFor="email">Last Name</label>
+              <input
+                type="text"
+                name="last_name"
+                value={last_name}
+                placeholder="Enter your last name"
+                onChange={handleOnChange}
+              />
+            </div>
             <div>
               <label htmlFor="email">Email</label>
               <input
@@ -86,7 +109,7 @@ const Login = () => {
             </div>
             <button type="submit">Submit</button>
             <span>
-              Already have an account? <Link to={"/signup"}>Signup</Link>
+              Already have an account? <Link to={"/login"}>Login</Link>
             </span>
           </form>
           <ToastContainer />
@@ -94,4 +117,4 @@ const Login = () => {
       );
 };
 
-export default Login
+export default Signup
