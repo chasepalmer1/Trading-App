@@ -14,9 +14,7 @@ function App() {
   return (
     <>
       <Routes>
-        <Route path="/" element={<Login/>}/>
-        <Route path="signUp" element/>
-        <Route path="/paperTrade" element={<PaperTrading/>}/>
+        <Route path="/" element={<PaperTrading/>}/>
         <Route path="/portTrack" element={<PortfolioTracking/>}/>
 
         <Route path="/login" element={<Login/>}/>
