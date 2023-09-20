@@ -4,6 +4,7 @@ const PortfolioTracking = () => {
 
     return (
         <>
+            <NavBar/>
         </>
     )
 

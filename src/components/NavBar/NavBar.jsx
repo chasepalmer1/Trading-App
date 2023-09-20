@@ -11,7 +11,7 @@ const NavBar = () => {
             </div>
             <div class="inner">
                 <ul>
-                    <Link to="/">Paper-Trade</Link>
+                    <Link to="/paperTrade">Paper-Trade</Link>
                     <Link to="/portTrack">Portfolio Tracker</Link>
                 </ul>
             </div>
