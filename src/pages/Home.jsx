@@ -5,7 +5,7 @@ function Home() {
 
     return (
         <div className="homepage">
-
+            
             <h1>Hello {location.state.id}! Welcome to TradeHub!</h1>
         </div>
     )
