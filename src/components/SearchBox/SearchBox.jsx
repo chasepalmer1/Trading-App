@@ -5,7 +5,7 @@ const SearchBox = () => {
         <div className="outer">
             <div className="inner-box">
                 <h3 className="box-title">Search:</h3>
-                <input type="text" ></input>
+                <input style={{padding: "0"}} type="text" ></input>
             </div>
             <div className="inner-box">
                 <h3 className="box-title">Recent Searches:</h3>

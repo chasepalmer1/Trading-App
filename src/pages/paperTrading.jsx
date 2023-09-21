@@ -3,6 +3,7 @@ import PortfolioChart from '../components/PortfolioChart/PortfolioChart'
 import SearchBox from '../components/SearchBox/SearchBox'
 import PortfolioStats from '../components/PortfolioStats/PortfolioStats'
 import Positions from '../components/Positions/Positions'
+import NavBar from '../components/NavBar/NavBar'
 
 const PaperTrading = () => {
 
