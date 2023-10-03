@@ -6,7 +6,7 @@ const PortfolioTracking = () => {
 
     return (
         <>
-            <NavBar/>
+            <NavBar displayContent="Portfolio Tracker"/>
         </>
     )
 

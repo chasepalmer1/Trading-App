@@ -9,9 +9,11 @@ const SearchBox = () => {
             </div>
             <div className="inner-box">
                 <h3 className="box-title">Recent Searches:</h3>
-                <a>GOOG</a>
-                <a>VOO</a>
-                <a>QQQ</a>
+                <ul style={{display: "flex", flexWrap: "wrap"}}>
+                    <a>GOOG</a>
+                    <a>VOO</a>
+                    <a>QQQ</a>
+                </ul>
             </div>
         </div>
     )
