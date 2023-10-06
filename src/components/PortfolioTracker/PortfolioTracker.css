@@ -1,0 +1,31 @@
+.personal-index {
+    width: 100%;
+    padding: 1% 1% 1% 2%;
+    display: flex;
+    border-left: 2px solid rgb(54, 54, 54);
+    margin: 1% 0 1% 1%;
+}
+
+.personal-index > div > h3 {
+    margin-right: 5%;
+}
+
+.outer-tracker {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-height: 490px;
+    height: 60vh;
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+@media screen and (max-width: 1400px) {
+    .outer-tracker {
+        height: 65vh;
+    }
+}
+
+.red {
+    border-color: rgba(255, 0, 0, 0.62);
+}

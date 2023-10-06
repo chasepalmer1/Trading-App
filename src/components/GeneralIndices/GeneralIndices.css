@@ -1,0 +1,31 @@
+.outer-gen {
+    margin-top: max(5%, 50px);
+    flex-direction: column;
+    width: auto;
+}
+
+.major-index > div > h3 {
+    margin-right: 5%;
+}
+
+.major-index {
+    width: 700px;
+    padding: 1% 1% 1% 2%;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid rgb(54, 54, 54);
+    margin: 1% 0 1% 1%
+
+}
+
+@media screen and (max-width: 830px) {
+    .major-index {
+        width: 500px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .major-index {
+        width: 260px;
+    }
+}

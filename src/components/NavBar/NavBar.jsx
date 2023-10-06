@@ -16,7 +16,7 @@ const NavBar = (props) => {
                 <ul>
                     <Link to="/">Home</Link>
                     <Link to="/paperTrade">Paper-Trade</Link>
-                    <Link to="/portTrack">Portfolio Tracker</Link>
+                    <Link to="/portTrack">Portfolio-Tracker</Link>
                 </ul>
             </div>
         </div>

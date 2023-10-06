@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { API_PORT } from "../../api/models/constants";
+import GeneralIndices from "../components/GeneralIndices/GeneralIndices";
 import axios from "axios";
 
 const Login = () => {
@@ -65,35 +66,36 @@ const Login = () => {
             <h2>Login Account</h2>
             <div className="form_container_inner">
                 <form onSubmit={handleSubmit}>
-                <div>
-                <label htmlFor="email">Email</label>
-                <input
-                    type="email"
-                    name="email"
-                    value={email}
-                    placeholder="Enter your email"
-                    onChange={handleOnChange}
-                />
-                </div>
-                <div>
-                <label htmlFor="password">Password</label>
-                <input
-                    type="password"
-                    name="password"
-                    value={password}
-                    placeholder="Enter your password"
-                    onChange={handleOnChange}
-                />
-                </div>
-                <div className="form-help">   
-                    <button type="submit">Submit</button>
-                    <span>
-                    Don't have an account? <Link style={{marginLeft: "2%", padding: "0", borderLeft: "none", borderBottom: "1px solid rgb(65, 65, 65)"}} to={"/signup"}>Signup</Link>
-                    </span>
-                </div>
-            </form>
+                    <div>
+                        <label htmlFor="email">Email</label>
+                        <input
+                            type="email"
+                            name="email"
+                            value={email}
+                            placeholder="Enter your email"
+                            onChange={handleOnChange}
+                        />
+                        </div>
+                        <div>
+                        <label htmlFor="password">Password</label>
+                        <input
+                            type="password"
+                            name="password"
+                            value={password}
+                            placeholder="Enter your password"
+                            onChange={handleOnChange}
+                        />
+                        </div>
+                        <div className="form-help">   
+                            <button type="submit">Submit</button>
+                        <span>
+                            Don't have an account? <Link style={{marginLeft: "2%", padding: "0", borderLeft: "none", borderBottom: "1px solid rgb(65, 65, 65)"}} to={"/signup"}>Signup</Link>
+                        </span>
+                    </div>
+                </form>
             </div>
           <ToastContainer />
+          <GeneralIndices/>
         </div>
       );
 };

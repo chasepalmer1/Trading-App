@@ -16,6 +16,10 @@ body {
     color: #0fb533d0;
 }
 
+.num-neg {
+    color: #8d0a05e8;
+}
+
 .box-title {
     border-bottom: 1px solid #606266;
 }

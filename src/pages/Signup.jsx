@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import { toast, ToastContainer } from "react-toastify";
 import { API_PORT } from "../../api/models/constants";
+import GeneralIndices from "../components/GeneralIndices/GeneralIndices";
 import axios from "axios";
 
 import './SignIn.css'
@@ -119,6 +120,7 @@ const Signup = () => {
             </form>
           </div>
           <ToastContainer />
+          <GeneralIndices />
         </div>
       );
 };
