@@ -1,4 +1,5 @@
-import { GetStockInfo } from "../controllers/FInanceController.js";
+import { GetStockInfo } from "../controllers/FInanceController";
+
 
 const router = express.Router();
 
