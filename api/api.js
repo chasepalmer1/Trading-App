@@ -4,6 +4,7 @@ import { API_PORT } from './models/constants.js'
 import startMongo from './models/mongo.js'
 import cookieParser from 'cookie-parser'
 import authRoute from './routes/AuthRoute.js'
+import financeRoute from './routes/FinanceRoute.js'
 
 const app = express()
 startMongo()
@@ -25,3 +26,4 @@ app.use(
 app.use(cookieParser())
 
 app.use("/", authRoute)
+app.use("/finance", financeRoute)
