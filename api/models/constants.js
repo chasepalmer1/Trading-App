@@ -5,7 +5,7 @@ const MONGO_USER = 'admin'
 const MONGO_PASS = 'vdL1kZUDoCeSqaR0'
 const MONGO_URL = 'tradehub.jvbeclf.mongodb.net'
 const MONGO_DB = 'tradehub'
-const API_PORT = 8000
+const API_PORT = 3719
 
 const TOKEN_KEY = 'SULI'
 

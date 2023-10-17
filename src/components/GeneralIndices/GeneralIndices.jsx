@@ -2,8 +2,21 @@ import React from 'react'
 import './GeneralIndices.css'
 
 import IndexTrack from '../IndexTrack/IndexTrack'
+import axios from 'axios'
+import { API_PORT } from '../../../api/models/constants'
 
-const GeneralIndices = () => {
+const GeneralIndices = async() => {
+
+    const ticker = "aapl";
+
+    try {
+        const resp = await axios.post(`http://localhost:${API_PORT}/finance/quote`, {'ticker': ticker}, {headers: {"Content-Type": "application/json"}})
+        console.log(resp.body)
+    }
+    catch(E) {
+        console.log(E)
+    }
+
 
     return (
         <div class="outer outer-gen">
