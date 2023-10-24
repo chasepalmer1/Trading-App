@@ -11,4 +11,4 @@ const GetStockInfo = async(req, res) => {
     res.status(200).json({name: short_name, price:current_price})
 }
 
-export { GetStockInfo}
+export { GetStockInfo }

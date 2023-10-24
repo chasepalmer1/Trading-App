@@ -94,7 +94,7 @@ const Login = () => {
                     </div>
                 </form>
             </div>
-          <ToastContainer />
+          <ToastContainer/>
           <GeneralIndices/>
         </div>
       );
