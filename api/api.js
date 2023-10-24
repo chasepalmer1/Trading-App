@@ -26,4 +26,4 @@ app.use(
 app.use(cookieParser())
 
 app.use("/", authRoute)
-app.use("/finance", financeRoute)
+app.use("/finance/", financeRoute)
