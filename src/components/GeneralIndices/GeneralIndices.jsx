@@ -25,10 +25,22 @@ const GeneralIndices = () => {
                 }
         
             }
-            setList(l)
+            // function sleep(ms) {
+            //     return new Promise(resolve => setTimeout(resolve, ms));
+            //   }
+          
+            //   // waits for 1000ms
+            //   await sleep(60000);
+            // setList(l)
+            return l;
         }
-        fetchData().catch(e => console.log(e))
-    }, [list, setList])
+        fetchData().then(data => {
+            setList([...data])
+        })
+        const l = fetchData().catch(e => console.log(e))
+        console.log(l)
+        setList(l)
+    }, [list])
 
 
     return (
