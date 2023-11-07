@@ -13,7 +13,7 @@ const Positions = () => {
     ]);
 
     return (
-        <div className="outer" style={{display: "flex", flexDirection: "column", overflowY: "scroll", overflowX: "hidden", height: "90%"}}>
+        <div className="outer" style={{width: "100%", display: "flex", flexDirection: "column", overflowY: "scroll", overflowX: "hidden", height: "90%"}}>
             <div className="personal-index">
                 <h4 style={{margin:"0 10% 0 0", color: "#EFEFEF", width: "70%"}}>Ticker</h4>
             <div style={{display: "flex", justifyContent: "right", marginRight: "2%"}}>

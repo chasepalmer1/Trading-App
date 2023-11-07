@@ -4,8 +4,10 @@ import IndexTrack from '../IndexTrack/IndexTrack';
 
 const PortfolioTracker = () => {
 
-    const [active, setActive] = useState(false)
-    const handleClick = () => {
+    const [active, setActive] = useState(false);
+    const [ticker, setTicker] = useState();
+
+    const handleRemove = () => {
         setActive(!active);
     }
 
@@ -28,11 +30,24 @@ const PortfolioTracker = () => {
         }
     }
 
+    const handleAdd = () => {
+        console.log("add")
+    }
+
+    const updateTicker = (e) => {
+        setTicker(e.target.value);
+        console.log(e.target.value)
+    }
+
     return (
         <div className="outer outer-tracker">
-            <div style={{display: "flex", alignItems: "center"}}>
+            <div style={{display: "flex", alignItems: "center", width: "100%"}}>
                 <h3>My Stocks</h3>
-                <button className={active ? "red" : "normal"} onClick={handleClick} style={{maxWidth:"100px", height: "20px", padding: "0"}}>Remove</button>
+                <button className={active ? "red" : "normal"} onClick={handleRemove} style={{maxWidth:"100px", height: "20px", padding: "0"}}>Remove</button>
+            </div>
+            <div style={{display: "flex", alignItems: "center", width: "100%"}}>
+                <input onChange={updateTicker} type="text" style={{padding: "0", width: "20%"}} placeholder="Ticker"></input>
+                <button className={"normal"} onClick={handleAdd} style={{maxWidth:"100px", height: "20px", padding: "0"}}>Add</button>
             </div>
             <div className="personal-index">
                 <h4 style={{margin:"0 10% 0 0", color: "#EFEFEF", width: "100%"}}>Ticker</h4>

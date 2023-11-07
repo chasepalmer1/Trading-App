@@ -34,7 +34,6 @@ const PaperTrading = () => {
                     <SearchBox></SearchBox>
                 </div>
                 <div className="bottom" style={{display: "flex", height: '400px', flexWrap: "wrap", gap: "2%"}}>
-                    <PortfolioChart></PortfolioChart>
                     <Positions></Positions>
                 </div>
             </div>
